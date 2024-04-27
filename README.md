@@ -5,8 +5,8 @@ Este projeto é um sistema de design desenvolvido para permitir a estilização 
 ## Estrutura de Pastas
 
 /raiz
-
-|-- /lib # Código fonte dos estilos e componentes\n
-| |-- /themes # Temas aplicáveis aos componentes\n
+```plaintext
+|-- /lib # Código fonte dos estilos e componentes
+| |-- /themes # Temas aplicáveis aos componentes
 | |  |-- /inheriteds # componentes baseados em outros componentes
-
+```
