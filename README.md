@@ -26,17 +26,7 @@ void main() {
   runApp(const MyApp());
 }
 ```
-### Iniciar o sistema de design de exmeplo
-```dart
-import 'package:flutter/material.dart';
-import 'package:chameleon/chameleon.dart';
 
-void main() {
-// Inicialize o sistema de design com o tema base
-  startDs(ExampleTheme());
-  runApp(const MyApp());
-}
-```
 ### Utilizar um componente
 ```dart
 class MyHomePage extends StatefulWidget {
@@ -54,5 +44,48 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(child: ChameleonText(text: 'Texto',),),
     );
   }
+}
+```
+
+## criar um tema personalizado
+```dart
+import 'package:chameleon/chameleon.dart';
+// O custom theme deve extender o ChameleonBaseTheme
+class CustomTheme extends ChameleonBaseTheme {
+}
+```
+
+## crie um componente personalizado e adicione ao tema
+```dart
+import 'package:chameleon/chameleon.dart';
+
+class CustomThemeTextComponent extends StatelessWidget implements TextWidgetType{
+  const CustomThemeTextComponent({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final inheritedWidget = of(context);
+    
+    return Column(
+      children: inheritedWidget.children,
+    );
+  }
+}
+
+class CustomTheme extends ChameleonBaseTheme {
+    @override
+    TextWidgetType get text => const CustomThemeTextComponent();
+}
+```
+
+### Iniciar o sistema de design com o tema personalizado
+```dart
+import 'package:flutter/material.dart';
+import 'package:chameleon/chameleon.dart';
+
+void main() {
+// Inicialize o sistema de design com o tema base
+  startDs(CustomTheme());
+  runApp(const MyApp());
 }
 ```
