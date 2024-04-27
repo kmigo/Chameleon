@@ -5,10 +5,7 @@ class _ExampleText extends StatelessWidget implements TextWidgetType {
 
   @override
   Widget build(BuildContext context) {
-    final inheritedWidget = ChameleonText.of(context);
-    if (inheritedWidget == null) {
-      throw Exception('No ChameleonText found in context');
-    }
+    final inheritedWidget = of(context);
     return Text("By Exemple Theme: ${inheritedWidget.text}");
   }
 }
