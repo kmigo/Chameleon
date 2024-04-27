@@ -55,7 +55,7 @@ class CustomTheme extends ChameleonBaseTheme {
 }
 ```
 
-## Crie um componente personalizado e adicione ao tema
+### Crie um componente personalizado e adicione ao tema
 ```dart
 import 'package:chameleon/chameleon.dart';
 
@@ -86,4 +86,10 @@ void main() {
   startDs(CustomTheme());
   runApp(const MyApp());
 }
+```
+
+## Rodar script para geração de tokens do Design
+
+```bash
+flutter pub run chameleon:tokens_generate
 ```

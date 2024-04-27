@@ -14,7 +14,7 @@ dependencies:
 
 executables:
   chameleon:
-    bin/chameleon
+    bin/tokens_generate.dart
 
 
 dev_dependencies:
