@@ -21,6 +21,7 @@ import 'package:flutter/material.dart';
 import 'package:chameleon/chameleon.dart';
 
 void main() {
+// Inicialize o sistema de design com o tema base
   startDs(ChameleonBaseTheme());
   runApp(const MyApp());
 }
