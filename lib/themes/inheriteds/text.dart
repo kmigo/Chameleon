@@ -37,6 +37,6 @@ class ChameleonTextComponent extends StatelessWidget implements TextWidgetType {
     if (inheritedWidget == null) {
       throw Exception('No ChameleonText found in context');
     }
-    return Text("By Exemple Theme: ${inheritedWidget.text}");
+    return Text(inheritedWidget.text);
   }
 }
