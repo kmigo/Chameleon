@@ -1,8 +1,5 @@
-part of 'widgets.dart';
+part of '../theme.dart';
 
-abstract class ColumnWidgetType extends Widget {
-  const ColumnWidgetType({super.key});
-}
 
 class ChameleonColumn extends InheritedWidget {
   final List<Widget> children;

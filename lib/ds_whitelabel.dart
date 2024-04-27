@@ -1,11 +1,12 @@
 import 'package:ds_whitelabel/simple_bind.dart';
 
-import 'themes/inheriteds/widgets.dart';
-import 'themes/themes.dart';
 
+import 'themes/themes.dart';
+import 'themes/inheriteds/inheriteds.dart';
 export './themes/themes.dart';
-export './themes/inheriteds/widgets.dart';
-export './themes/default_theme/theme.dart';
+
+export 'themes/chameleon_default/theme.dart';
+
 
 startDs(BaseTheme theme){
   SimpleBind.instance.bind<TextWidgetType>(theme.text);

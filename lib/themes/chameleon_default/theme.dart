@@ -2,12 +2,15 @@
 
 import 'package:flutter/widgets.dart';
 
-import '../inheriteds/widgets.dart';
+import '../../simple_bind.dart';
 import '../themes.dart';
+import '../inheriteds/inheriteds.dart';
 part 'text.dart';
 part 'column.dart';
+part 'inheriteds/text.dart';
+part 'inheriteds/colum.dart';
 
-class DefaulTheme extends BaseTheme {
+class ChameleonTheme extends BaseTheme {
 
 
   @override

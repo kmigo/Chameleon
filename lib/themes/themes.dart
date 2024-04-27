@@ -1,8 +1,7 @@
 
 
 
-import './inheriteds/widgets.dart';
-
+import 'inheriteds/inheriteds.dart';
 
 abstract class BaseTheme {
  TextWidgetType get text;

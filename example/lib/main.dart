@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ds_whitelabel/ds_whitelabel.dart';
 
 void main() {
-  startDs(DefaulTheme());
+  startDs(ChameleonTheme());
   runApp(const MyApp());
 }
 
