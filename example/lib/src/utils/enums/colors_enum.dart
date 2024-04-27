@@ -1,0 +1,3 @@
+enum ChameleonColorsEnum {
+ light, 
+ }

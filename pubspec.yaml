@@ -11,6 +11,12 @@ dependencies:
   flutter:
     sdk: flutter
 
+
+executables:
+  chameleon:
+    bin/chameleon
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -23,7 +29,8 @@ dev_dependencies:
 flutter:
 
   # To add assets to your package, add an assets section, like this:
-  # assets:
+  assets:
+    - assets/design_tokens/design_tokens.json
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   #
