@@ -66,9 +66,7 @@ class CustomThemeTextComponent extends StatelessWidget implements TextWidgetType
   Widget build(BuildContext context) {
     final inheritedWidget = of(context);
     
-    return Column(
-      children: inheritedWidget.children,
-    );
+    return  Text(inheritedWidget.text);
   }
 }
 
