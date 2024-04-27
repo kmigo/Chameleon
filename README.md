@@ -6,7 +6,7 @@ Este projeto é um sistema de design desenvolvido para permitir a estilização 
 
 /raiz
 
-|-- /lib # Código fonte dos estilos e componentes
-| |-- /themes # Temas aplicáveis aos componentes
+|-- /lib # Código fonte dos estilos e componentes\n
+| |-- /themes # Temas aplicáveis aos componentes\n
 | |  |-- /inheriteds # componentes baseados em outros componentes
 
