@@ -26,7 +26,17 @@ void main() {
   runApp(const MyApp());
 }
 ```
+### Iniciar o sistema de design de exmeplo
+```dart
+import 'package:flutter/material.dart';
+import 'package:chameleon/chameleon.dart';
 
+void main() {
+// Inicialize o sistema de design com o tema base
+  startDs(ExampleTheme());
+  runApp(const MyApp());
+}
+```
 ### Utilizar um componente
 ```dart
 class MyHomePage extends StatefulWidget {
