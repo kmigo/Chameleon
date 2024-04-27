@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ds_whitelabel/ds_whitelabel.dart';
+import 'package:chameleon/chameleon.dart';
 
 void main() {
   startDs(ChameleonBaseTheme());

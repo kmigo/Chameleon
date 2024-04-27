@@ -9,4 +9,38 @@ Este projeto é um sistema de design desenvolvido para permitir a estilização 
 |-- /lib # Código fonte dos estilos e componentes
 | |-- /themes # Temas aplicáveis aos componentes
 | |  |-- /inheriteds # componentes baseados em outros componentes
+| |  |-- /example_theme # tema exemplo extendido do tema base com componentes customizados
+```
+
+## Uso
+Após a instalação do pacote, é possível importar os estilos e componentes diretamente no código fonte do projeto. Para isso, basta importar o arquivo principal do pacote e utilizar os componentes disponíveis.
+
+### Iniciar o sistema de design
+```dart
+import 'package:flutter/material.dart';
+import 'package:chameleon/chameleon.dart';
+
+void main() {
+  startDs(ChameleonBaseTheme());
+  runApp(const MyApp());
+}
+```
+
+### Utilizar um componente
+```dart
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(child: ChameleonText(text: 'Texto',),),
+    );
+  }
+}
 ```

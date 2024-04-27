@@ -1,4 +1,4 @@
-import 'package:ds_whitelabel/simple_bind.dart';
+import '/simple_bind.dart';
 
 
 import 'themes/themes.dart' ;
