@@ -7,14 +7,14 @@ import '../themes.dart';
 part 'text.dart';
 part 'column.dart';
 
-class DefaultTheme extends BaseTheme {
+class DefaulTheme extends BaseTheme {
 
 
   @override
-  TextWidgetType get text => const DefaultThemeText();
+  TextWidgetType get text => const _ChameleonText();
 
   @override
-  ColumnWidgetType get column => const DefaultThemeColumn();
+  ColumnWidgetType get column => const _ChameleonColumn();
   
   
 }

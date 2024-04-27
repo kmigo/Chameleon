@@ -3,15 +3,15 @@ abstract class TextWidgetType extends Widget {
   const TextWidgetType({super.key});
 }
 
-class ReflexDSText extends InheritedWidget {
+class ChameleonText extends InheritedWidget {
   final String text;
-  ReflexDSText({super.key,required this.text}) : super( child: SimpleBind.instance.get<TextWidgetType>());
+  ChameleonText({super.key,required this.text}) : super( child: SimpleBind.instance.get<TextWidgetType>());
     @override
-  bool updateShouldNotify(ReflexDSText oldWidget) {
+  bool updateShouldNotify(ChameleonText oldWidget) {
     return oldWidget.text != text;
   }
-  static ReflexDSText? of(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<ReflexDSText>();
+  static ChameleonText? of(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<ChameleonText>();
   }
 }
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ds_whitelabel/ds_whitelabel.dart';
 
 void main() {
-  startDs(DefaultTheme());
+  startDs(DefaulTheme());
   runApp(const MyApp());
 }
 
@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: ReflexDSText(text: 'Texto',),),
+      body: Center(child: ChameleonText(text: 'Texto',),),
     );
   }
 }

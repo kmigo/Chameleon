@@ -4,15 +4,15 @@ abstract class ColumnWidgetType extends Widget {
   const ColumnWidgetType({super.key});
 }
 
-class ReflexDSColumn extends InheritedWidget {
+class ChameleonColumn extends InheritedWidget {
   final List<Widget> children;
-  ReflexDSColumn({super.key,required this.children}) : super( child: SimpleBind.instance.get<ColumnWidgetType>());
+  ChameleonColumn({super.key,required this.children}) : super( child: SimpleBind.instance.get<ColumnWidgetType>());
     @override
-  bool updateShouldNotify(ReflexDSColumn oldWidget) {
+  bool updateShouldNotify(ChameleonColumn oldWidget) {
     return oldWidget.children != children;
   }
-  static ReflexDSColumn? of(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<ReflexDSColumn>();
+  static ChameleonColumn? of(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<ChameleonColumn>();
   }
 }
 

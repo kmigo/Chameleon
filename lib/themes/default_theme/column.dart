@@ -2,14 +2,14 @@ part of 'theme.dart';
 
 
 
-class DefaultThemeColumn extends StatelessWidget  implements ColumnWidgetType{
-  const DefaultThemeColumn({super.key});
+class _ChameleonColumn extends StatelessWidget  implements ColumnWidgetType{
+  const _ChameleonColumn({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final inheritedWidget = ReflexDSColumn.of(context);
+    final inheritedWidget = ChameleonColumn.of(context);
     if (inheritedWidget == null) {
-      throw Exception('No ReflexDSColumn found in context');
+      throw Exception('No ChameleonColumn found in context');
     }
     return Column(
       children: inheritedWidget.children,
