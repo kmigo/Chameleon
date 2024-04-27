@@ -39,6 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        // Use o componente ChameleonText
       body: Center(child: ChameleonText(text: 'Texto',),),
     );
   }
