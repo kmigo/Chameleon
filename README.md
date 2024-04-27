@@ -47,15 +47,15 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 
-## criar um tema personalizado
+## Criar um tema personalizado
 ```dart
 import 'package:chameleon/chameleon.dart';
-// O custom theme deve extender o ChameleonBaseTheme
+// O CustomTheme deve extender o ChameleonBaseTheme
 class CustomTheme extends ChameleonBaseTheme {
 }
 ```
 
-## crie um componente personalizado e adicione ao tema
+## Crie um componente personalizado e adicione ao tema
 ```dart
 import 'package:chameleon/chameleon.dart';
 
