@@ -1,7 +1,7 @@
 part of 'theme.dart';
 
-class _ChameleonText extends StatelessWidget implements TextWidgetType {
-  const _ChameleonText({super.key});
+class _ExampleText extends StatelessWidget implements TextWidgetType {
+  const _ExampleText({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,6 +9,6 @@ class _ChameleonText extends StatelessWidget implements TextWidgetType {
     if (inheritedWidget == null) {
       throw Exception('No ChameleonText found in context');
     }
-    return Text(inheritedWidget.text);
+    return Text("By Exemple Theme: ${inheritedWidget.text}");
   }
 }

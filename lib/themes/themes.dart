@@ -3,10 +3,13 @@
 
 import 'inheriteds/inheriteds.dart';
 
-abstract class BaseTheme {
- TextWidgetType get text;
-ColumnWidgetType get column;
+ class ChameleonBaseTheme {
 
+  TextWidgetType get text => const ChameleonTextComponent();
+
+
+  ColumnWidgetType get column => const ChameleonColumnComponent();
+  
 }
 
 
