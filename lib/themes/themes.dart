@@ -5,10 +5,10 @@ import 'inheriteds/inheriteds.dart';
 
  class ChameleonBaseTheme {
 
-  TextWidgetType get text => const ChameleonTextComponent();
+  TextWidgetChameleonType get text => const ChameleonTextComponent();
 
 
-  ColumnWidgetType get column => const ChameleonColumnComponent();
+  ColumnWidgetChameleonType get column => const ChameleonColumnComponent();
   
 }
 

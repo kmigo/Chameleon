@@ -1,6 +1,6 @@
 part of 'theme.dart';
 
-class _ExampleText extends StatelessWidget implements TextWidgetType {
+class _ExampleText extends StatelessWidget implements TextWidgetChameleonType {
   const _ExampleText({super.key});
 
   @override

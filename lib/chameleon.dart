@@ -10,7 +10,7 @@ export './themes/inheriteds/inheriteds.dart' hide ChameleonColumnComponent, Cham
 
 
 startDs(ChameleonBaseTheme theme){
-  SimpleBind.instance.bind<TextWidgetType>(theme.text);
-  SimpleBind.instance.bind<ColumnWidgetType>(theme.column);
+  SimpleBind.instance.bind<TextWidgetChameleonType>(theme.text);
+  SimpleBind.instance.bind<ColumnWidgetChameleonType>(theme.column);
 
 }

@@ -3,12 +3,12 @@ part of 'inheriteds.dart';
 
 
 
-abstract class ColumnWidgetType extends Widget {
-  const ColumnWidgetType({super.key});
+abstract class ColumnWidgetChameleonType extends Widget {
+  const ColumnWidgetChameleonType({super.key});
  
 }
 
-extension ColumnWidgetTypeExtension on ColumnWidgetType {
+extension ColumnWidgetChameleonTypeExtension on ColumnWidgetChameleonType {
    ChameleonColumn of(BuildContext context) {
     final inheritedWidget = ChameleonColumn.of(context);
     if (inheritedWidget == null) {
@@ -20,7 +20,7 @@ extension ColumnWidgetTypeExtension on ColumnWidgetType {
 
 class ChameleonColumn extends InheritedWidget {
   final List<Widget> children;
-  ChameleonColumn({super.key,required this.children}) : super( child: SimpleBind.instance.get<ColumnWidgetType>());
+  ChameleonColumn({super.key,required this.children}) : super( child: SimpleBind.instance.get<ColumnWidgetChameleonType>());
     @override
   bool updateShouldNotify(ChameleonColumn oldWidget) {
     return oldWidget.children != children;
@@ -30,7 +30,7 @@ class ChameleonColumn extends InheritedWidget {
   }
 }
 
-class ChameleonColumnComponent extends StatelessWidget implements ColumnWidgetType{
+class ChameleonColumnComponent extends StatelessWidget implements ColumnWidgetChameleonType{
   const ChameleonColumnComponent({super.key});
 
   @override

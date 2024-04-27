@@ -59,7 +59,7 @@ class CustomTheme extends ChameleonBaseTheme {
 ```dart
 import 'package:chameleon/chameleon.dart';
 
-class CustomThemeTextComponent extends StatelessWidget implements TextWidgetType{
+class CustomThemeTextComponent extends StatelessWidget implements TextWidgetChameleonType{
   const CustomThemeTextComponent({super.key});
 
   @override
@@ -72,7 +72,7 @@ class CustomThemeTextComponent extends StatelessWidget implements TextWidgetType
 
 class CustomTheme extends ChameleonBaseTheme {
     @override
-    TextWidgetType get text => const CustomThemeTextComponent();
+    TextWidgetChameleonType get text => const CustomThemeTextComponent();
 }
 ```
 

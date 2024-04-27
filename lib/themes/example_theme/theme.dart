@@ -12,9 +12,9 @@ part 'column.dart';
 class ExampleTheme extends ChameleonBaseTheme {
 
   @override
-  TextWidgetType get text => const _ExampleText();
+  TextWidgetChameleonType get text => const _ExampleText();
   @override
-  ColumnWidgetType get column => const _ExampleColumn();
+  ColumnWidgetChameleonType get column => const _ExampleColumn();
  
   
 }

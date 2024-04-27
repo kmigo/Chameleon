@@ -3,7 +3,7 @@ part of 'theme.dart';
 
 
 
-class _ExampleColumn extends StatelessWidget implements ColumnWidgetType{
+class _ExampleColumn extends StatelessWidget implements ColumnWidgetChameleonType{
   const _ExampleColumn ({super.key});
 
   @override
