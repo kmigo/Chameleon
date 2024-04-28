@@ -89,7 +89,39 @@ void main() {
 ```
 
 ## Rodar script para geração de tokens do Design
+para rodar o script de geração de tokens do design, é importante que o arquivo de tokens esteja na pasta `assets/design_tokens/design_token.json`:
 
 ```bash
 flutter pub run chameleon:tokens_generate
+```
+
+caso queria alterar o caminho do arquivo de tokens, é possível passar o caminho como argumento:
+
+```bash
+flutter pub run chameleon:tokens_generate --path=design_token.json
+```
+
+é importante que o arquivo de tokens esteja no formato json, com a seguinte estrutura:
+
+```json
+{
+  "figmaScale": 1.045,
+  "colors": {
+    "light": {
+      "primary": "#FF0000",
+      "secondary": "#00FF00",
+      "background": "#FFFFFF",
+      "text": "#000000"
+    },
+  },
+  "typography": {
+    "subtitle": {
+      "fontFamily": "Roboto",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "letterSpacing": 0.5,
+      "lineHeight": 1.5
+    },
+  }
+}
 ```

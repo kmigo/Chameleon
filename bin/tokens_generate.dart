@@ -1,15 +1,41 @@
 import 'dart:convert';
 import 'dart:io';
+
 import 'dart:developer' as dev;
+const directoryEnum = 'lib/src/utils/enums';
 String buildEnumPath(String name) {
-  return "lib/src/utils/enums/${name}_enum.dart";
+  return "$directoryEnum/${name}_enum.dart";
 }
+
+
+// Caminho para o arquivo Dart de saída
+var dartDirectory = 'lib/src/utils/resources/tokens';
+var dartFilePath = '$dartDirectory/design_tokens.dart';
 
 const dsName = "Chameleon";
 
-void main() async {
+verifyDirectory(String path) {
+  var currentDirectory = Directory.current.path;
+  final directory = Directory("$currentDirectory/$path");
+  if(!directory.existsSync()){
+    directory.createSync(recursive: true);
+  }
+  }
+
+void main(List<String> arguments) async {
+  var args = {};
+  for (var arg in arguments) {
+    if(!arg.contains('=')){
+      continue;
+    }
+    var split = arg.split('=');
+    args[split[0]] = split[1];
+  }
+  String? defaultTokens=  args['--path'];
   // Caminho para o arquivo JSON
-  var jsonFilePath = './assets/design_tokens/design_token.json';
+  verifyDirectory(directoryEnum);
+  verifyDirectory(dartDirectory);
+  var jsonFilePath = defaultTokens ??  './assets/design_tokens/design_token.json';
   // Ler o arquivo JSON
   var jsonString = await File(jsonFilePath).readAsString();
   // Decodificar o JSON para um mapa
@@ -24,8 +50,7 @@ void main() async {
   var nameClasse = '_ChameleonDesignTokens';
   String classString = "// ignore_for_file: library_private_types_in_public_api\nimport 'dart:convert';\nimport 'package:flutter/services.dart';\n";
   classString = _createClass(nameClasse, jsonMap, classString);
-  // Caminho para o arquivo Dart de saída
-  var dartFilePath = './lib/src/utils/resources/tokens/design_tokens.dart';
+  
   // Escrever a string da classe no arquivo Dart
   classString = singletonDesign(nameClasse, classString,jsonMap);
   await File(dartFilePath).writeAsString(classString);
